@@ -133,14 +133,42 @@ const Index = () => {
             </CardContent>
           </Card>
 
+          {/* Contacts Card */}
+          <Card className="hover:shadow-lg transition-all duration-300 animate-fade-in [animation-delay:250ms]">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Icon name="MessageCircle" size={20} className="text-primary" />
+                <h3 className="font-display font-medium">Contacts</h3>
+              </div>
+              <div className="space-y-3">
+                <Button variant="ghost" size="sm" className="w-full justify-start" asChild>
+                  <a href="https://github.com/w0vz" target="_blank" rel="noopener noreferrer">
+                    <Icon name="Github" size={16} className="mr-3" />
+                    GitHub
+                    <Icon name="ExternalLink" size={12} className="ml-auto" />
+                  </a>
+                </Button>
+                <Button variant="ghost" size="sm" className="w-full justify-start" asChild>
+                  <a href="https://t.me/w0vz" target="_blank" rel="noopener noreferrer">
+                    <Icon name="Send" size={16} className="mr-3" />
+                    Telegram
+                    <Icon name="ExternalLink" size={12} className="ml-auto" />
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Skills Card */}
           <Card className="col-span-1 md:col-span-2 lg:col-span-2 hover:shadow-lg transition-all duration-300 animate-fade-in [animation-delay:300ms]">
             <CardContent className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Icon name="Zap" size={20} className="text-primary" />
                 <h3 className="font-display font-medium">Core Skills</h3>
-                <Button variant="ghost" size="sm" className="ml-auto">
-                  <Icon name="ArrowRight" size={16} />
+                <Button variant="ghost" size="sm" className="ml-auto" asChild>
+                  <a href="/skills">
+                    <Icon name="ArrowRight" size={16} />
+                  </a>
                 </Button>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -173,9 +201,11 @@ const Index = () => {
               <div className="flex items-center gap-3 mb-4">
                 <Icon name="FolderCode" size={20} className="text-primary" />
                 <h3 className="font-display font-medium">Featured Projects</h3>
-                <Button variant="ghost" size="sm" className="ml-auto">
-                  View All
-                  <Icon name="ArrowRight" size={16} className="ml-1" />
+                <Button variant="ghost" size="sm" className="ml-auto" asChild>
+                  <a href="/projects">
+                    View All
+                    <Icon name="ArrowRight" size={16} className="ml-1" />
+                  </a>
                 </Button>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
